@@ -11,6 +11,7 @@ echo 'export ALCHEMY_KEY='$ALCHEMY_KEY >> $HOME/.bash_profile
 
 sudo apt update -y &>/dev/null
 sudo apt install git docker docker-compose -y &>/dev/null
-git clone https://github.com/mrbnd/starkNet-docker &>/dev/null
-docker swarm init --advertise-addr 127.0.0.1
+rm -rf starkNet-docker
+git clone https://github.com/mrbnd/starkNet-docker  &>/dev/null
+docker swarm init --advertise-addr 127.0.0.1 &>/dev/null
 docker stack deploy --compose-file="$HOME/starkNet-docker/docker-compose.yml" stack
