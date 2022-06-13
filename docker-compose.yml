@@ -3,7 +3,6 @@ services:
 
   pathfinder:
     image: eqlabs/pathfinder:v0.2.2-alpha
-    restart: always
     ports:
       - 9545
     environment:
