@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+
+  pathfinder:
+    image: eqlabs/pathfinder:v0.2.2-alpha
+    restart: always
+    ports:
+      - 9545
+    environment:
+      - RUST_LOG=info
+      - PATHFINDER_ETHEREUM_API_URL=${ALCHEMY_KEY}
+    deploy:
+      mode: replicated
+      replicas: 5
