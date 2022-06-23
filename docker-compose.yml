@@ -10,6 +10,6 @@ services:
       - PATHFINDER_ETHEREUM_API_URL=${ALCHEMY_KEY}
     deploy:
       mode: replicated
-      replicas: 10
+      replicas: 8
       restart_policy:
         condition: on-failure
