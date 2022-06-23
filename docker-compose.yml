@@ -2,7 +2,7 @@ version: "3.3"
 services:
 
   pathfinder:
-    image: eqlabs/pathfinder:v0.2.2-alpha
+    image: eqlabs/pathfinder:v0.2.3-alpha
     ports:
       - 9545
     environment:
